@@ -2,11 +2,13 @@
 require "tty-table"
 employees = []
 
-# how do I pull the info into the table because I don't have it until later in the code
-# I'm thinking create a function that updates and displays table and call it after each change or read
-table = TTY::Table.new(["First Name", "Last Name", "Salary", "Active"], [["#{employees[0][:first_name]}", "a2", "a3", "a4"], ["b1", "b2"]])
-puts table.render(:ascii)
+# trying to create a function that takes in the employees array and displays table
+def render_table
+  table = TTY::Table.new(["First Name", "Last Name", "Salary", "Active"], [["a1", "a2", "a3", "a4"], ["b1", "b2"]])
+  puts table.render(:ascii)
+end
 
+render_table()
 # get user input and make decision
 quit = false
 while !quit
